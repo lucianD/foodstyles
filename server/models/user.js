@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
-const bcryptService = require('../services/bcrypt.service');
+const bcryptService = require('../services/bcrypt');
 
-const sequelize = require('../../config/database');
+const sequelize = require('../database/db');
 
 const hooks = {
     beforeCreate(user) {
@@ -20,6 +20,12 @@ const User = sequelize.define('User', {
         unique: true,
     },
     password: {
+        type: Sequelize.STRING,
+    },
+    authToken: {
+        type: Sequelize.STRING,
+    },
+    refreshToken: {
         type: Sequelize.STRING,
     },
 }, {hooks, tableName});
