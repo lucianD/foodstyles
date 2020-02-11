@@ -1,0 +1,19 @@
+{
+  "name": "foodstyles-server",
+  "scripts": {
+    "start:server": "cd server && nodemon index.js",
+    "start:client": "node client/index.js"
+  },
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "bcryptjs": "^2.4.3",
+    "graphql-yoga": "^1.18.3",
+    "jsonwebtoken": "^8.5.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.1.0",
+    "sequelize": "^5.21.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
